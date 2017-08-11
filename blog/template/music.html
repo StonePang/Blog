@@ -1,0 +1,153 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title  data-name=''>音乐</title>
+        <link rel="stylesheet" href="/css/general.css">
+        <link rel="stylesheet" href="/css/topnav.css">
+        <link rel="stylesheet" href="/css/music.css">
+        <link rel="stylesheet" href="/css/processBar.css">
+    </head>
+    <body>
+        <header id='id-header'>
+            <div id='head-content' class="center">
+                <a class='logo head-text' href="/">主页</a>
+                <ul id='id-topnav' class='flex-x-center'>
+                    <li>
+                        <a class='head-text' href="/movie">电影</a>
+                    </li>
+                    <li>
+                        <a class='head-text' href="/todo">备忘录</a>
+                        <div class="reminder-num hide"></div>
+                    </li>
+                    <li>
+                        <a class='head-text' href="/music">音乐</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div id='id-body' data-number='5'>
+            <div id='id-audio-body' class="center">
+                <ol class="playlist" data-active='0'>
+                    <li class='each-music' data-index='0'>
+                        <div class="icon-like" data-value='unlike'>
+                            <img class='icon' data-action='like' src="/audio/icon/unlike.png" alt="unlike-icon">
+                            <img class='icon none' data-action='unlike' src="/audio/icon/like.png" alt="like-icon">
+                        </div>
+                        <div class="music-name" data-action='choose'>浮躁</div>
+                        <div class="music-artist">王菲</div>
+                        <div class="music-album">浮躁</div>
+                    </li>
+                    <li class='each-music' data-index='1'>
+                        <div class="icon-like" data-value='unlike'>
+                            <img class='icon' data-action='like' src="/audio/icon/unlike.png" alt="unlike-icon">
+                            <img class='icon none' data-action='unlike' src="/audio/icon/like.png" alt="like-icon">
+                        </div>
+                        <div class="music-name" data-action='choose'>怀念</div>
+                        <div class="music-artist">王菲</div>
+                        <div class="music-album">你王菲所以我王菲</div>
+                    </li>
+                    <li class='each-music' data-index='2'>
+                        <div class="icon-like" data-value='unlike'>
+                            <img class='icon' data-action='like' src="/audio/icon/unlike.png" alt="unlike-icon">
+                            <img class='icon none' data-action='unlike' src="/audio/icon/like.png" alt="like-icon">
+                        </div>
+                        <div class="music-name" data-action='choose'>天空</div>
+                        <div class="music-artist">王菲</div>
+                        <div class="music-album">天空</div>
+                    </li>
+                    <li class='each-music' data-index='3'>
+                        <div class="icon-like" data-value='unlike'>
+                            <img class='icon' data-action='like' src="/audio/icon/unlike.png" alt="unlike-icon">
+                            <img class='icon none' data-action='unlike' src="/audio/icon/like.png" alt="like-icon">
+                        </div>
+                        <div class="music-name" data-action='choose'>阿嬷阿哈</div>
+                        <div class="music-artist">窦唯</div>
+                        <div class="music-album">甜蜜十八岁</div>
+                    </li>
+                    <li class='each-music' data-index='4'>
+                        <div class="icon-like" data-value='unlike'>
+                            <img class='icon' data-action='like' src="/audio/icon/unlike.png" alt="unlike-icon">
+                            <img class='icon none' data-action='unlike' src="/audio/icon/like.png" alt="like-icon">
+                        </div>
+                        <div class="music-name" data-action='choose'>Gymnopédie No.1</div>
+                        <div class="music-artist">Erik Satie</div>
+                        <div class="music-album">Gymnopédie No.1</div>
+                    </li>
+                </ol>
+
+                <div class="info">
+                    <div class="music-info-1">
+                        <div class="music-cover">
+                            <ol class='cover-list' data-active='0'>
+                                <li class='each-cover none' data-index='0'>
+                                    <img class='cover' src="/audio/cover/0.jpg" alt="cover">
+                                </li>
+                                <li class='each-cover none' data-index='1'>
+                                    <img class='cover' src="/audio/cover/1.jpg" alt="cover">
+                                </li>
+                                <li class='each-cover none' data-index='2'>
+                                    <img class='cover' src="/audio/cover/2.jpg" alt="cover">
+                                </li>
+                                <li class='each-cover none' data-index='3'>
+                                    <img class='cover' src="/audio/cover/3.jpg" alt="cover">
+                                </li>
+                                <li class='each-cover none' data-index='4'>
+                                    <img class='cover' src="/audio/cover/4.jpg" alt="cover">
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="music-info">
+                            <div class="info-name"></div>
+                            <div class="info-artist"></div>
+                            <div class="info-album"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-control" >
+                    <div class='play-button'>
+                        <img class='img-last control-icon' data-action='last' src="/audio/icon/上一首.png" alt="">
+                        <img class='img-pause control-icon none' data-action='pause' src="/audio/icon/暂停.png" alt="">
+                        <img class='img-play control-icon' data-action='play' src="/audio/icon/播放.png" alt="">
+                        <img class='img-next control-icon' data-action='next' src="/audio/icon/下一首.png" alt="">
+                    </div>
+                    <div class="progress-bar">
+                        <div class="time">
+                            <span class='current-time'>00:00</span>
+                            <span> / </span>
+                            <span class='total-time'></span>
+                        </div>
+                        <div class="progress-bar-now" data-action='progress'></div>
+                        <div class="progress-bar-total" data-action='progress'></div>
+                    </div>
+                    <div class="function-button">
+                        <div class="loop" data-mode='cycle' data-num='3' data-active='0'>
+                            <img class='img-cycle control-icon lc' data-mode='cycle' data-action='loop' data-index='0' src="/audio/icon/列表循环.png" alt="">
+                            <img class='img-single control-icon lc none' data-mode='single' data-action='loop' data-index='1' src="/audio/icon/单曲循环.png" alt="">
+                            <img class='img-shuffle control-icon lc none' data-mode='shuffle' data-action='loop' data-index='2' src="/audio/icon/shuffle.png" alt="">
+                        </div>
+                        <div class="volume" data-value='volume'>
+                            <img class='img-volume control-icon' data-action='toggle_volume' src="/audio/icon/volume.png" alt="">
+                            <img class='img-mute control-icon none' data-action='toggle_volume' src="/audio/icon/静音.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="volume-block none" data-action='volume_none'>
+                        <input class='volume-bar none' data-action='volume_none' type="range" name="volume">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <audio class='none' src="/audio/music/0.mp3" controls="controls">
+        </audio>
+        <script src="/js/jquery-3.2.1.min.js"></script>
+        <script src="/js/define_obj.js"></script>
+        <script src="/js/processBar.js"></script>
+        <script src="/js/page/music.js"></script>
+        <script src="/js/page/head.js"></script>
+        <script src="/js/run.js"></script>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title data-name=''>主页</title>
+        <link rel="stylesheet" href="/css/general.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/topnav.css">
+        <link rel="stylesheet" href="/css/lunbotu.css">
+        <link rel="stylesheet" href="/css/weather.css">
+        <link rel="stylesheet" href="/css/hash.css">
+        <link rel="stylesheet" href="/css/sweetalert.css">
+    </head>
+    <body>
+        <header id='id-header'>
+            <div id='head-content' class="center">
+                <a class='logo head-text' href="/">主页</a>
+                <ul id='id-topnav' class='flex-x-center'>
+                    <li>
+                        <a class='head-text' href="/movie">电影</a>
+                    </li>
+                    <li>
+                        <a class='head-text' href="/todo">备忘录</a>
+                        <div class="reminder-num hide"></div>
+                    </li>
+                    <li>
+                        <a class='head-text' href="/music">音乐</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="center">
+                    <!-- 轮播图 -->
+            <div class="gua-3" data-blogId='0'>
+                <!-- data-imgs 是图片的总数 -->
+                <!-- data-active 是当前显示的图片的下标 -->
+                <div class="gua-slide" data-imgs="3" data-active="0">
+                    <img id=id-guaimage-0 data-index='0' class="gua-slide-image gua-active" src="slideimages/1.jpg" alt="">
+                    <img id=id-guaimage-1 data-index='1' class=gua-slide-image src="slideimages/2.jpg" alt="">
+                    <img id=id-guaimage-2 data-index='2' class=gua-slide-image src="slideimages/3.jpg" alt="">
+                    <div class="gua-slide-indicators">
+                        <div id='id-indi-0'class="gua-slide-indi gua-white"
+                            data-index='0'></div>
+                        <div id='id-indi-1' class="gua-slide-indi"
+                            data-index='1'></div>
+                        <div id='id-indi-2' class="gua-slide-indi"
+                            data-index='2'></div>
+                    </div>
+                </div>
+                <button class="gua-slide-button gua-left gua-vertical-center"
+                        data-offset="-1"> &lt; </button>
+                <button class="gua-slide-button gua-right gua-vertical-center"
+                        data-offset="1"> &gt; </button>
+                <div class="blog-text" data-index='0' data-blogId=''>
+                    <div class="blog-text-title" data-index='0'>
+                        添加博客后显示
+                    </div>
+                    <div class="blog-text-content" data-index='0'>
+                        添加博客后显示
+                    </div>
+                </div>
+                <div class="blog-text none" data-index='1' data-blogId=''>
+                    <div class="blog-text-title" data-index='1'>
+                        添加博客后显示
+                    </div>
+                    <div class="blog-text-content" data-index='1'>
+                        添加博客后显示
+                    </div>
+                </div>
+                <div class="blog-text none" data-index='2' data-blogId=''>
+                    <div class="blog-text-title" data-index='2'>
+                        添加博客后显示
+                    </div>
+                    <div class="blog-text-content" data-index='2'>
+                        添加博客后显示
+                    </div>
+                </div>
+                <a class="enter-button" href=''>
+                    阅读全文
+                </a>
+            </div>
+            <img id='id-weather' src="/images/weather.png" alt="">
+            <img id='id-add-icon' src="/images/pencil47.png" alt="">
+            <img id="id-hash" src="/images/up.png" alt="">
+            <div class="weather-block">
+                <div class="weather"></div>
+            </div>
+            <div class="gua-blogs">
+            </div>
+        </div>
+    <script src="/js/remarkable.min.js"></script>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/sweetalert.min.js"></script>
+    <script src="/js/echarts.min.js"></script>
+    <script src="/js/define_obj.js"></script>
+    <script src="/js/api/blog_api.js"></script>
+    <script src="/js/api/usercode_api.js"></script>
+    <script src="/js/api/weather_api.js"></script>
+    <script src="/js/page/lunbotu.js"></script>
+    <script src="/js/page/blog_index.js"></script>
+    <script src="/js/page/weather.js"></script>
+    <script src="/js/page/head.js"></script>
+    <script src="/js/page/hash.js"></script>
+    <script src="/js/run.js"></script>
+    </body>
+</html>

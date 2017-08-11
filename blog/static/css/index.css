@@ -1,0 +1,270 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    position: relative;
+}
+/*#new-blog {
+    position: fixed;
+    right: 10%;
+    top: 30%;
+    width: 100px;
+    height: 100px;
+}*/
+#id-add-icon,#id-weather {
+    position: fixed;
+    z-index: 20;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#id-weather {
+    right: 15%;
+    top: 20%;
+}
+
+#id-add-icon {
+    right: 15%;
+    top: 40%;
+}
+
+
+#id-add-icon:hover, #id-weather:hover {
+    transform: scale(1.2, 1.2);
+    transition: 1s;
+}
+
+#id-mima-input {
+    border: none;
+    background: lightgreen;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(-10px);
+    }
+    20% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(10px);
+    }
+    40% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    60% {
+        transform: translateX(0px);
+    }
+    70% {
+        transform: translateX(10px);
+    }
+    80% {
+        transform: translateX(0);
+    }
+    90% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.shake{
+    animation: 0.6s shake;
+}
+
+#new-blog {
+    position: relative;
+}
+
+#id-mima-input-false {
+    position: absolute;
+    display: none;
+    height: 20px;
+    background: yellow;
+}
+
+#id-blog-add-area {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    /*display: none;*/
+    background-color: #e0e0e0;
+    z-index: 100;
+}
+
+#id-close-add {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 70px;
+    color: white;
+    text-align: center;
+}
+#id-blog-add {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: grey;
+}
+
+#id-blog-add-left,#id-blog-add-right {
+    width: 45%;
+    background-color: white;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*#id-blog-add-right {
+    display: inline-block;
+}*/
+
+#id-blog-title, #id-blog-content {
+    width: 90%;
+    margin: 5px 0;
+}
+
+#id-blog-title{
+    margin-top: 3%;
+    font-size: 20px;
+    padding: 3px;
+    font-family: sans-serif;
+}
+
+#id-blog-content{
+    height: 85%;
+    resize: none;
+    font-size: 15px;
+    padding: 5px;
+}
+
+#left-foot {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+#id-preview {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 92%;
+    /*background-color: grey;*/
+    line-height: 1.9;
+    overflow-y: scroll;
+    word-break: break-all;
+}
+
+#id-cover-pre {
+    align-self: center;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.blog-title{
+    word-break: break-all;
+}
+.blog-content {
+    margin-top: 20px;
+}
+
+.gua-blogs {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content:flex-start;
+}
+.gua-blog-cell {
+    position: relative;
+    width: 30%;
+    margin: 0 15px 30px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color:rgba(54,61,76,0.2)
+}
+
+.blog-head {
+    margin: 5%;
+    /*width: 100%;*/
+    max-height: 300px;
+    border: none;
+    overflow: hidden;
+    /*background-color: #363d4c;*/
+    opacity: 0.9;
+}
+
+.blog-cover {
+    max-width: 100%;
+    transition: 0.8s;
+}
+
+.blog-title {
+    height:65px;
+    margin: 5%;
+    font-size: 120%;
+    line-height: 30px;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+.blog-a-t {
+    margin: 5%;
+    font-size: 90%;
+    color: #363d4c;
+    align-self: flex-end;
+    cursor: default;
+}
+/*a*/
+a:link {
+    text-decoration: none;
+    color: grey;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.gua-blog-cell a:hover {
+    text-decoration: none;
+    color: #363d4c;
+
+}
+/*hover*/
+.hov:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.blog-head:hover {
+    opacity: 1;
+}
+
+.blog-cover:hover{
+    transform: scale(1.1, 1.1);
+    transition: 0.8s;
+}

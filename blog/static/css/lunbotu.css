@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+}
+.gua-3{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: 400px;
+    margin: 30px 0;
+    background-color: #e0e0e0;
+}
+.gua-slide {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+    height: 90%;
+    /*background-color: #f0f0f0;*/
+}
+
+.blog-text {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 75%;
+    margin-top: 20px;
+    margin-right: 20px;
+    /*background-color: grey;*/
+}
+
+.enter-button {
+    position: absolute;
+    width: 15%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 130%;
+    bottom: 20px;
+    right: 4%;
+    color: #363d4c;
+    background: #46b855;
+    transition: 1s;
+}
+.blog-text-title {
+    height:65px;
+    margin: 5%;
+    font-size: 130%;
+    line-height: 30px;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+.blog-text-content {
+    margin: 5%;
+    height: 50%;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+.gua-slide-image {
+    display: none;
+    align-self: center;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100 {
+        opacity: 1
+    }
+}
+
+.gua-active {
+    display: inline-block;
+    animation: 1s fadeIn;
+}
+.gua-slide-button {
+    position: absolute;
+    height: 50px;
+    width: 30px;
+    /**/
+    font-size: 120%;
+    background: black;
+    color: white;
+    opacity: 0;
+    /**/
+    border: none;
+    /**/
+    cursor: pointer;
+}
+.gua-slide-button:focus {
+    outline: none;
+}
+.gua-slide-button.gua-left {
+    left: 0;
+}
+.gua-slide-button.gua-right {
+    right: 0;
+}
+/* 用来垂直居中一个元素的套路 css */
+.gua-vertical-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.gua-slide-indicators {
+    padding: 0 6px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.gua-slide-indi {
+    display: inline-block;
+    width: 30px;
+    height: 5px;
+    background: white;
+    cursor: pointer;
+}
+
+
+.gua-white {
+    background: red;
+    width: 40px;
+}
+.gua-pointer {
+    cursor: pointer;
+}
+
+.blog-text-title,.blog-text-content:hover {
+    cursor: default;
+}
+
+.enter-button:hover {
+    background-color: #363d4c;
+    color: white;
+    transition: 1s;
+}

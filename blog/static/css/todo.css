@@ -1,0 +1,249 @@
+/*隐藏滚动条*/
+::-webkit-scrollbar {
+    display: none;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #363636;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background:url(/images/background_todo.jpg) no-repeat center center ;
+    background-size:100%;
+    /*background-color:rgba(55,167,215,0.5);*/
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+
+.todos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 1200px;
+
+}
+.ttt {
+    font-size: 120%;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    background-color: #363d4c;
+}
+.uncomplete-todos,.add-block,.form,.complete-todos {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+    height: 600px;
+    margin: 0 0 10px 0;
+    /*background: #c0c0c0;*/
+    background-color:rgba(192,192,192,0.4);
+    overflow-y: scroll;
+    text-overflow:ellipsis;
+    /*color: #363d4c;*/
+}
+
+.todoList {
+    margin: 2px 2px 2px 5px;
+}
+.list{
+    position: relative;
+    margin: 0 10px 0 10px;
+    transition: 1s;
+}
+.list + .list {
+    margin-top: 5px;
+}
+.even {
+    background: #607B8B;
+    color: #CFCFCF;
+}
+
+.odd{
+    background: #CFCFCF;
+    color: #607B8B;
+}
+.dldate {
+    margin: 8px 0;
+    color: white;
+}
+
+.deadline-date {
+    margin: 3px 0;
+}
+.deadline {
+    font-size: 80%;
+    padding-left: 5px;
+}
+.title{
+    position: relative;
+    margin: 0 10px 0 5px;
+    padding-left: 20px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    font-size: 90%;
+    overflow-x: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.l-complete {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    z-index: 99;
+}
+
+.uncomplete-todos  .l-complete {
+    background-color: #EE2C2C;
+}
+
+.complete-todos  .l-complete {
+    background-color: #363636;
+}
+
+.l-delete {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    color : black;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    text-align: center;
+    transition: 0.6s;
+    z-index: 98;
+}
+
+.add-todo {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    align-self: flex-start;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50%;
+    background: #363d4c;
+    color: white;
+    transition: 1s;
+}
+
+.add-block,.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-block > div {
+    padding: 10px;
+    margin: 10px 10px 0 10px;
+    word-break: break-all;
+}
+
+.add-block > div + div{
+    margin-top: 5px;
+}
+
+.con-content{
+    margin-bottom: 10px !important;
+}
+.add-block > div:nth-child(odd){
+    background-color: #a9a9a9;
+}
+.add-block > div:nth-child(even){
+    background-color: #dcdcdc;
+}
+
+
+.add-todo:hover {
+    font-size: 50px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.todo-title,.c-deadline,.todo-content,.add{
+    margin: 10px 10px 0 10px;
+}
+
+.c-deadline{
+    position: relative;
+}
+.a{
+    font-size: 85%;
+    color: white;
+}
+
+.todo-deadline {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.todo-content {
+    height: 465px;
+    resize: none;
+}
+
+.add {
+    background: #363d4c;
+    text-align: center;
+    padding: 3px;
+    color: white;
+}
+.bgcolor {
+    background-color: #F08080;
+}
+.todo-title {
+    height: 20px;
+}
+input, textarea {
+    background-color:rgba(96,123,139,0.5);
+    border: none;
+    padding: 5px;
+    font-size: 13px;
+    color: #363636;
+}
+/*hover css*/
+
+.add-todo:hover {
+    font-size: 50px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.list:hover {
+    margin-left: 20px;
+    margin-right: 0;
+    transition: 0.6s;
+}
+
+.l-complete:hover {
+    cursor: pointer;
+    background: yellow;
+    transition: 0s;
+}
+
+.l-delete:hover {
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.4s;
+}
+.title,.add {
+    cursor: pointer;
+}
+
+.ttt,.add-block {
+    cursor: default;
+}

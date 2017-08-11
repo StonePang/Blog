@@ -1,0 +1,13 @@
+.gua-blogs {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    background: lightblue;
+}
+.gua-blog-cell {
+    justify-content: space-between;
+    margin: 5px 0;
+    outline: solid 1px lightblue;
+    height: 300px;
+    overflow: hidden;
+}

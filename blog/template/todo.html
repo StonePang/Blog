@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title data-name=''>记事本</title>
+        <link rel="stylesheet" href="/css/general.css">
+        <link rel="stylesheet" href="/css/topnav.css">
+        <link rel="stylesheet" href="/css/sweetalert.css">
+        <link rel="stylesheet" href="/css/todo.css">
+    </head>
+    <body>
+        <header id='id-header'>
+            <div id='head-content' class="center">
+                <a class='logo head-text' href="/">主页</a>
+                <ul id='id-topnav' class='flex-x-center'>
+                    <li>
+                        <a class='head-text' href="/movie">电影</a>
+                    </li>
+                    <li>
+                        <a class='head-text' href="/todo">备忘录</a>
+                        <div class="reminder-num hide"></div>
+                    </li>
+                    <li>
+                        <a class='head-text' href="/music">音乐</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="main">
+            <div class="todos">
+                <div class="container">
+                    <div class="ttt">未完成事件</div>
+                    <div class="uncomplete-todos">
+                        <div class='todoList'>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="add-todo">
+                    +
+                </div>
+
+                <div class="container ab none">
+                    <div class="ttt">事件详情</div>
+                    <div class="add-block" data-id='' data-complete=''>
+                    </div>
+                </div>
+
+                <div class="container nb">
+                    <div class="ttt">新建事件</div>
+                    <div class='form'>
+                        <input class='todo-title input' autofocus placeholder='请输入事件标题'>
+                        <div class="c-deadline">
+                            <span class='a'>截止日期</span><input class='todo-deadline' type="datetime-local">
+                        </div>
+                        <textarea class='todo-content input'  placeholder='请输入事件详情'></textarea>
+                        <div class='add'>添加</div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="ttt">已完成事件</div>
+                    <div class="complete-todos">
+                        <div class='todoList'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="/js/jquery-3.2.1.min.js"></script>
+        <!-- <script src="/js/echarts.min.js"></script>
+        <script src="/js/lodash.min.js"></script> -->
+        <script src="/js/sweetalert.min.js"></script>
+        <script src="/js/define_obj.js"></script>
+        <script src="/js/api/todo_api.js"></script>
+        <script src="/js/page/todo.js"></script>
+        <script src="/js/page/head.js"></script>
+        <script src="/js/run.js"></script>
+    </body>
+</html>

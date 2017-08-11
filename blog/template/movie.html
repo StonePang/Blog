@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title data-name=''>电影</title>
+        <link rel="stylesheet" href="/css/general.css">
+        <link rel="stylesheet" href="/css/topnav.css">
+        <link rel="stylesheet" href="/css/echarts.css">
+        <link rel="stylesheet" href="/css/sweetalert.css">
+    </head>
+    <body>
+        <header id='id-header'>
+            <div id='head-content' class="center">
+                <a class='logo head-text' href="/">主页</a>
+                <ul id='id-topnav' class='flex-x-center'>
+                    <li>
+                        <a class='head-text' href="/movie">电影</a>
+                    </li>
+                    <li>
+                        <a class='head-text' href="/todo">备忘录</a>
+                        <div class="reminder-num hide"></div>
+                    </li>
+                    <li>
+                        <a class='head-text' href="/music">音乐</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <button id='id-movies' type="button" name="button">时光网top100</button>
+        <div id='pie-echart' class='echarts'>
+
+        </div>
+        <script src="/js/jquery-3.2.1.min.js"></script>
+        <script src="/js/echarts.min.js"></script>
+        <script src="/js/lodash.min.js"></script>
+        <script src="/js/sweetalert.min.js"></script>
+        <script src="/js/define_obj.js"></script>
+        <script src="/js/api/movie_api.js"></script>
+        <script src="/js/page/movie.js"></script>
+        <script src="/js/page/head.js"></script>
+        <script src="/js/run.js"></script>
+        <!-- <script src="/js/page/movie.js"></script> -->
+    </body>
+</html>

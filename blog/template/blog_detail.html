@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/general.css">
+        <link rel="stylesheet" href="/css/blog_detail.css">
+        <link rel="stylesheet" href="/css/edit_tc.css">
+        <link rel="stylesheet" href="/css/topnav.css">
+        <link rel="stylesheet" href="/css/hash.css">
+        <link rel="stylesheet" href="/css/sweetalert.css">
+        <meta charset="utf-8">
+        <title data-name=''>博客</title>
+    </head>
+
+    <body data-id="{{blog_id}}">
+        <header id='id-header'>
+            <div id='head-content' class="center">
+                <a class='logo head-text' href="/">主页</a>
+                <ul id='id-topnav' class='flex-x-center'>
+                    <li>
+                        <a class='head-text' href="/movie">电影</a>
+                    </li>
+                    <li>
+                        <a class='head-text' href="/todo">备忘录</a>
+                        <div class="reminder-num hide"></div>
+                    </li>
+                    <li>
+                        <a class='head-text' href="/music">音乐</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div id='id-blog'>
+        </div>
+        <img id="id-hash" src="/images/up.png" alt="">
+        <script src="/js/jquery-3.2.1.min.js"></script>
+        <script src="/js/remarkable.min.js"></script>
+        <script src="/js/sweetalert.min.js"></script>
+        <script src="/js/define_obj.js"></script>
+        <script src="/js/api/blog_api.js"></script>
+        <script src="/js/api/comment_api.js"></script>
+        <script src="/js/api/usercode_api.js"></script>
+        <script src="/js/page/head.js"></script>
+        <script src="/js/page/blog_detail.js"></script>
+        <script src="/js/page/edit_tc.js"></script>
+        <script src="/js/page/comment.js"></script>
+        <script src="/js/page/head.js"></script>
+        <script src="/js/page/hash.js"></script>
+        <script src="/js/run.js"></script>
+
+    </body>
+</html>

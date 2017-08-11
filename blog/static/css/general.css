@@ -1,0 +1,36 @@
+.none {
+    display: none !important;
+}
+
+.hide {
+    visibility: hidden !important;
+}
+
+.center {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    width: 1000px;
+    /*outline: black solid 2px;*/
+}
+
+/*flex父元素，横向，水平起始位置均分排列，垂直占满（子元素无height）*/
+.flex-x-center {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.flex-y-center {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.location-cc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

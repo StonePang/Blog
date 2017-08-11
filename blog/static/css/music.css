@@ -1,0 +1,237 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    background:url(/audio/background.jpg) no-repeat center center;
+    /*background-size:100%;*/
+}
+
+#id-body {
+    margin: 30px 0 0 0;
+    padding: 0;
+}
+
+#id-audio-body {
+    border-width: 2px;
+    border-color: #363d4c;
+    border-style: solid;
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 400px;
+    margin: 0;
+    padding: 60px 0 0 0 ;
+    background-color:rgba(54,61,76,0.6);
+    color: #EEE8CD;
+    overflow-y: scroll;
+}
+
+.each-music {
+    display: flex;
+    position: relative;
+    font-size: 18px;
+    height: 30px;
+    margin: 3px;
+    line-height: 30px;
+}
+
+.each-music > div {
+    width: 200px;
+}
+
+.icon-like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent !important;
+    width: 150px !important;
+    border-right: 2px solid transparent;
+}
+
+.play-border {
+    border-right-color: red;
+}
+
+.music-name {
+    margin-left: 30px;
+    border: 2px;
+}
+
+.music-info {
+    position: relative;
+    padding-top: 60px;
+}
+
+.cover-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.cover {
+    width: 150px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.info {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 200px;
+    margin: 0;
+    padding:0;
+}
+
+.music-info-1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    width: 500px;
+    height: 150px;
+    margin-left: 120px;
+}
+
+.music-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 200px;
+    padding: 0;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.music-info > div {
+    margin: 5px 0;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.info-artist,.info-album {
+    color: #363d4c;
+    font-size: 16px !important;
+    margin-left: 10px !important;
+}
+
+.music-control,.function-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.music-control {
+    background-color:rgba(54,61,76,0.5);
+}
+
+.play-button {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 30px 120px;
+}
+
+.progress-bar {
+    width: 500px;
+    position: relative;
+    height: 100px;
+}
+
+.time {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    font-size: 16px;
+    color: grey;
+}
+
+.progress-bar-total,.progress-bar-now{
+    position: absolute;
+    width: 500px;
+    height: 6px;
+    background: white;
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.progress-bar-now{
+    background: red;
+    width: 0;
+    z-index: 10;
+}
+
+.function-button {
+    width: 80px;
+    margin-right: 60px;
+}
+
+.volume-block {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 30px;
+    top: 3px;
+    right: 3px;
+    background: #363d4c;
+}
+
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.control-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.play-background{
+    background-color:rgba(240,240,240,0.3);
+    color: #363d4c;
+}
+
+
+/*悬停的css*/
+.each-music:hover {
+    color: #FF6A6A;
+}
+
+.time,.music-info,.music-artist,.music-album,.each-artist,.each-album:hover {
+    cursor:default;
+}
+
+.music-name,.progress-bar-total,.progress-bar-now,.icon-like,
+.control-icon:hover {
+    cursor: pointer;
+}
+
+
+/*事件相关的css*/
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+
+.rotate-on {
+    animation: rotate 12s linear infinite;
+    animation-play-state: running;
+}
+
+.rotate-pause {
+    animation: rotate 12s linear infinite;
+    animation-play-state: paused;
+}
