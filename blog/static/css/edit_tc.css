@@ -22,6 +22,7 @@
     font-size: 70px;
     color: white;
     text-align: center;
+    z-index: 2;
 }
 #id-blog-add {
     position: absolute;
@@ -86,4 +87,22 @@
     align-self: center;
     width: 400px;
     margin: 0 auto;
+}
+
+
+@media all and (max-width:412px) {
+    #id-blog-add {
+        background-color: inherit;
+    }
+
+    #id-blog-add-left {
+        width: 90%;
+    }
+
+    #id-blog-add-right {
+        display: none;
+    }
+    .ex {
+        margin-left: 5%;
+    }
 }

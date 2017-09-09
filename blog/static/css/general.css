@@ -10,8 +10,16 @@
     position: relative;
     margin: 0 auto;
     padding: 0;
-    width: 1000px;
+    width: 70%;
     /*outline: black solid 2px;*/
+}
+
+@media all and (max-width:412px) {
+    .center {
+        position: relative;
+        margin: 0;
+        width: 100%;
+    }
 }
 
 /*flex父元素，横向，水平起始位置均分排列，垂直占满（子元素无height）*/

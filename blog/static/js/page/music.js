@@ -132,6 +132,8 @@ loadPage.volumeBar = function() {
         }
     }
     progressBar(obj)
+    var h = document.documentElement.clientHeight
+    e('body').style.height = h + 'px'
 }
 
 
@@ -280,9 +282,10 @@ const changLoop = function(event) {
 
 const progressClick = function(event) {
     var music = e('audio')
+    var bar = e('.progress-bar-total')
     var totalTime = e('audio').duration
     var offset = event.offsetX
-    var totalWidth = 500
+    var totalWidth = bar.offsetWidth
     var p = new Progress(totalWidth, totalTime)
     var newTime = p.getValue(offset, '.progress-bar-now')
     var ctime = new Time(newTime)
@@ -379,13 +382,14 @@ const showInfo = function(index) {
 
 const showCurrentTime = function() {
     var music = e('audio')
+    var bar = e('.progress-bar-total')
     var timer = setInterval(function() {
         var music = e('audio')
         var currentTime = music.currentTime
         var totalTime = music.duration
         var ctime = new Time(currentTime)
         ctime.putTime('.current-time')
-        var totalWidth = 500
+        var totalWidth = bar.offsetWidth
         var p = new Progress(totalWidth, totalTime)
         p.setWidth(currentTime, '.progress-bar-now')
     }, 1000)

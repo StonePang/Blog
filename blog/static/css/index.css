@@ -5,13 +5,6 @@
 body{
     position: relative;
 }
-/*#new-blog {
-    position: fixed;
-    right: 10%;
-    top: 30%;
-    width: 100px;
-    height: 100px;
-}*/
 #id-add-icon,#id-weather {
     position: fixed;
     z-index: 20;
@@ -93,13 +86,13 @@ body{
     background: yellow;
 }
 
-#id-blog-add-area {
+/*#id-blog-add-area {
     position: fixed;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    /*display: none;*/
+    display: none;
     background-color: #e0e0e0;
     z-index: 100;
 }
@@ -136,10 +129,6 @@ body{
     align-items: center;
 }
 
-/*#id-blog-add-right {
-    display: inline-block;
-}*/
-
 #id-blog-title, #id-blog-content {
     width: 90%;
     margin: 5px 0;
@@ -170,7 +159,6 @@ body{
     flex-direction: column;
     width: 90%;
     height: 92%;
-    /*background-color: grey;*/
     line-height: 1.9;
     overflow-y: scroll;
     word-break: break-all;
@@ -180,7 +168,7 @@ body{
     align-self: center;
     width: 400px;
     margin: 0 auto;
-}
+}*/
 
 .blog-title{
     word-break: break-all;
@@ -192,20 +180,35 @@ body{
 .gua-blogs {
     width: 100%;
     display: flex;
+    display: -ms-flexbox;
     flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     margin-top: 30px;
     justify-content:flex-start;
+    -ms-justify-content:flex-start;
 }
+
 .gua-blog-cell {
+    flex: 0 0 33.33%;
+    -ms-flex: 0 0 33.33%;
     position: relative;
-    width: 30%;
-    margin: 0 15px 30px 15px;
     display: flex;
+    display: -ms-flexbox;
     flex-direction: column;
+    -ms-flex-direction: column;
     justify-content: space-between;
+    -ms-justify-content: space-between;
     overflow: hidden;
-    background-color:rgba(54,61,76,0.2)
 }
+
+.gua-blog-cell:nth-child(odd) {
+    background-color:rgba(54,61,76,0.2);
+}
+
+.gua-blog-cell:nth-child(even) {
+    background-color:rgba(169,169,169,0.2);
+}
+
 
 .blog-head {
     margin: 5%;
@@ -267,4 +270,39 @@ a:visited {
 .blog-cover:hover{
     transform: scale(1.1, 1.1);
     transition: 0.8s;
+}
+
+
+
+@media all and (max-width:412px) {
+    .gua-blogs {
+        margin: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .gua-blog-cell {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .blog-head {
+        display: none;
+    }
+
+    .blog-title {
+        font-size: 90%;
+        height:30px;
+        line-height: 30px;
+        margin: 8px 10px;
+        overflow-y: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+    }
+    .blog-a-t {
+        font-size: 60%;
+        margin: 3px 10px;
+    }
+
 }

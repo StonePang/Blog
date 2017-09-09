@@ -13,3 +13,17 @@
     transform: scale(1.2, 1.2);
     transition: 1s;
 }
+
+@media all and (min-width:412px) {
+    #id-hash{
+        right: 5%;
+        top: 90%;
+    }
+
+}
+@media all and (max-width:412px) {
+    #id-hash{
+        left: 5%;
+        top: 70%;
+    }
+}

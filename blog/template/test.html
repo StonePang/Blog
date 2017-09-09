@@ -71,6 +71,9 @@
             <div class="progress-bar-total" data-action='progress'></div>
             <div class="progress-cycle"></div>
         </div> -->
+        <div class="content">
+
+        </div>
         <script>
         var log = console.log.bind(console)
 
@@ -90,7 +93,7 @@
                 this.callback = obj.callback
                 this.setup()
             }
-
+            //初始量的设置和计算
             setup() {
                 var h = this.creatHtml()
                 var p = document.querySelector(this.selector)
@@ -100,8 +103,11 @@
                 this.totalBar = fa.querySelector('.pro-bar-total')
                 this.nowBar = fa.querySelector('.pro-bar-now')
                 this.cycle = fa.querySelector('.pro-cycle')
+                //计算总宽度
                 this.totalWidth = this.tw()
+                //绑定各个事件
                 this.bindEvents(this.callback)
+                //初始百分比计算出初始宽度
                 this.newValue = this.setupnv()
             }
 
@@ -118,6 +124,7 @@
                 return html
             }
 
+            //总宽度的计算
             tw() {
                 var cw = this.cycle.style.width
                 var tw = this.totalBar.style.width
@@ -129,15 +136,35 @@
                 var tw = this.totalWidth
                 var per = this.startPercentage
                 var startValue = tw * per
-                this.newValue = startValue
                 this.cycle.style.left = startValue + 'px'
                 this.nowBar.style.width = startValue + 'px'
+                return startValue
             }
 
+            //以newWidth计算得到newValue的函数
+            nv(x) {
+                var cw = this.cycle.style.width
+                var tw = this.totalBar.style.width
+                var tv = this.totalValue
+                var totalWidth = Number(tw.slice(0, -2)) - Number(cw.slice(0, -2))
+                var newValue = Math.floor(x / totalWidth * tv)
+                return newValue
+            }
 
+            //value得到width
+            nw(v) {
+                var cw = this.cycle.style.width
+                var tw = this.totalBar.style.width
+                var tv = this.totalValue
+                var totalWidth = Number(tw.slice(0, -2)) - Number(cw.slice(0, -2))
+                var newWidth = Math.floor(v / tv * totalWidth) + Number(cw.slice(0, -2))
+                return newWidth
+            }
+
+            //绑定事件，包括点击时间和鼠标事件
             bindEvents(callback) {
-                // var actions = this.actions
                 //that绑定为类对象this,在之后的绑定时间中庸that代替this,this代表调用的DOM对象document，
+                //callback作为小球位置改变后的回调函数，在mousedown和mousemove事件中都要调用，只是调用后通过this.dragable判断是否调用
                 var that = this
                 document.addEventListener('click', function(event) {
                     var k = event.target.dataset.action
@@ -175,16 +202,7 @@
 
             }
 
-            //计算得到newValue的函数
-            nv(x) {
-                var cw = this.cycle.style.width
-                var tw = this.totalBar.style.width
-                var tv = this.totalValue
-                var totalWidth = Number(tw.slice(0, -2)) - Number(cw.slice(0, -2))
-                var newValue = Math.floor(x / totalWidth * tv)
-                return newValue
-            }
-
+            //click事件的执行函数
             progress(event, callback) {
                 log('pro')
                 var x = event.offsetX
@@ -207,6 +225,7 @@
                 callback(this.newValue)
              }
 
+             //mousemove事件的执行函数
             mousemove_cycle(event, callback) {
                 if (this.dragable) {
                     var cycle = this.cycle
@@ -215,7 +234,7 @@
                     var x1 = this.pageX
                     var x2 = event.pageX
                     var move = x2 - x1
-                     if (parentX <= 0 && move <= 0) {
+                    if (parentX <= 0 && move <= 0) {
                         cycle.style.left = 0
                         now.style.width = 0
                     } else if (parentX >= this.totalWidth && move >= 0) {
@@ -234,11 +253,24 @@
                     }
                 }
             }
+
+            //要调用的成员函数，铜锅外部传递的value值改变内部的状态，包括dom的left和this.newValue, this.newWidth
+            setWidth(newValue) {
+                this.newValue = newValue
+                var cycle = this.cycle
+                var now = this.nowBar
+                var newWidth = this.nw(this.newValue)
+                this.newWidth = newWidth
+                cycle.style.left = newWidth + 'px'
+                now.style.width = newWidth + 'px'
+            }
         }
 
         var progressBar = function(obj) {
             var d = new ProBar(obj)
+            return d
         }
+
 
             var main = function() {
                 var s = document.querySelector('.s')
@@ -255,7 +287,9 @@
                         s.style.width = String(n) + 'px'
                     }
                 }
-                progressBar(o)
+                var pb = progressBar(o)
+                log(pb)
+                pb.setWidth(200)
             }
 
             main()

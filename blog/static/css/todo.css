@@ -19,6 +19,13 @@ body {
     height: 800px;
 }
 
+.container,.add-todo{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .todos {
     display: flex;
     justify-content: space-around;

@@ -1,6 +1,8 @@
 body {
     margin: 0;
 }
+
+
 .gua-3{
     display: flex;
     justify-content: space-around;
@@ -141,4 +143,41 @@ body {
     background-color: #363d4c;
     color: white;
     transition: 1s;
+}
+
+@media all and (max-width:412px) {
+    .gua-3{
+        height: 200px;
+        margin: 12px 0;
+    }
+    .blog-text-title {
+        height: 30px;
+        margin: 5%;
+        font-size: 80%;
+        line-height: 15px;
+    }
+    .blog-text-content {
+        font-size: 60%;
+    }
+    .gua-slide-indicators {
+        padding: 0 3px;
+        border-radius: 2.5px;
+    }
+    .gua-slide-indi {
+        width: 12px;
+        height: 3px;
+    }
+    .gua-white {
+        background: red;
+        width: 20px;
+    }
+    .enter-button {
+        position: absolute;
+        width: 15%;
+        height: 20px;
+        line-height: 20px;
+        font-size: 70%;
+        bottom: 10px;
+        right: 4%;
+    }
 }

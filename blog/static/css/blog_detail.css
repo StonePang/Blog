@@ -4,11 +4,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     font-style: normal;
 }
 
-#id-blog{
-    width: 800px;
-    background: #f0f0f0;
-    margin: 0 auto;
-}
+
 .blog-detail,.blog-comments{
     margin: 20px 0;
     padding : 20px 35px;
@@ -68,7 +64,7 @@ time {
 
 #id-blog-cover {
     max-width: 100%;
-    margin: 20px auto;
+    margin: 1em auto;
 }
 .pinglun{
     font-size: 90%;
@@ -169,4 +165,28 @@ Textarea {
 .hov:hover {
     cursor: pointer;
     color:  #FFA54F;
+}
+
+@media all and (min-width:412px) {
+    #id-blog{
+        width: 60%;
+        background: #f0f0f0;
+        margin: 0 auto;
+    }
+
+}
+@media all and (max-width:412px) {
+    #id-blog{
+        width: 100%;
+        background: #f0f0f0;
+    }
+
+    h1{
+        font-size: 1em;
+    }
+
+    .blog-detail{
+        margin: 0;
+    }
+
 }
